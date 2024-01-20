@@ -1,3 +1,12 @@
+/**
+TODO:
+- responsiveness
+- accessibility
+- blog post
+- SO api
+- dino
+*/
+
 :root {
   --base-font-family-serif: 'Libre Baskerville', serif;
   --base-font-family-sans: 'Work Sans', sans-serif;
@@ -69,6 +78,7 @@ section {
 
   .card {
     --card-color: var(--color-gray-medium);
+    --card-color-text: color-mix(in srgb, var(--card-color), black 50%);
     --card-color-light: color-mix(in srgb, var(--card-color), white 70%);
     --card-color-lighter: color-mix(in srgb, var(--card-color), white 98%);
     --card-color-hover: none;
@@ -85,7 +95,6 @@ section {
     gap: 1em;
     line-height: 1em;
     text-decoration: none;
-    color: inherit;
     transition: all var(--card-transition);
 
     &:hover, &:focus {
@@ -110,6 +119,7 @@ section {
     h3 {
       margin: 0;
       font-size: 1em;
+      color: var(--card-color-text);
     }
 
     b {
