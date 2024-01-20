@@ -15,6 +15,7 @@ TODO:
   --color-white: #fff;
   --color-blue: #007fff;
   --color-gray-dark: #2c3e50;
+  --color-gray-darker: color-mix(in srgb, var(--color-gray-dark), black 12%);
   --color-gray-medium: #8b9baa;
   --color-gray-light: #ecf0f1;
 
@@ -56,7 +57,11 @@ main {
 header {
   grid-area: header;
   color: var(--color-white);
-  background-color: var(--color-gray-dark);
+  background-image:
+    radial-gradient(
+      var(--color-gray-dark) 50%,
+      var(--color-gray-darker)
+    );
   padding: 4em;
   container-type: inline-size;
   position: relative;
@@ -64,10 +69,13 @@ header {
   h1 {
     font-family: var(--base-font-family-serif);
     font-size: 18cqw;
-    font-weight: 900;
+    font-weight: 400;
     line-height: 1em;
     margin: 0 0 0.1em 0;
     max-width: 50vw;
+    text-shadow:
+      0.05em 0.05em 0.05em var(--color-gray-darker),
+      0.04em 0.07em 0.05em var(--color-gray-darker);
   }
 
   .cats {
