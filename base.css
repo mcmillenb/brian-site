@@ -18,7 +18,7 @@ TODO:
   --color-gray-medium: #8b9baa;
   --color-gray-light: #ecf0f1;
 
-  --color-github: #7dbbe6;
+  --color-github: #125686;
   --color-stack-overflow: #fe7a16;
 }
 
@@ -105,8 +105,8 @@ section {
   padding: 2em 2em 2em 4em;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 0.5em;
+  justify-content: space-between;
   container-type: inline-size;
 
   h2 {
@@ -114,23 +114,32 @@ section {
     margin: 0.2em 0;
   }
 
+  .latest, .elsewhere {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
   .card {
+    grid-template-columns: 2em 1fr 1fr;
+    gap: 1em;
+  }
+
+  .card, .post {
     --card-color: var(--color-gray-medium);
     --card-color-text: color-mix(in srgb, var(--card-color), black 50%);
     --card-color-light: color-mix(in srgb, var(--card-color), white 70%);
     --card-color-lighter: color-mix(in srgb, var(--card-color), white 98%);
-    --card-color-hover: none;
+    --card-color-hover: var(--color-blue);
     --card-transition: ease-out 0.2s;
 
     cursor: pointer;
     display: grid;
-    grid-template-columns: 2em 1fr 1fr;
     background-color: var(--color-white);
     border: 0.15em solid var(--card-color-light);
     padding: 1em;
     border-radius: 4px;
     align-items: center;
-    gap: 1em;
     line-height: 1em;
     text-decoration: none;
     transition: all var(--card-transition);
@@ -140,11 +149,11 @@ section {
       background-color: var(--card-color-lighter);
     }
 
-    &:first-of-type {
+    &#gh-card {
       --card-color-hover: var(--color-github);
     }
 
-    &:last-of-type {
+    &#so-card {
       --card-color-hover: var(--color-stack-overflow);
     }
 
