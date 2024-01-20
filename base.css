@@ -40,10 +40,11 @@ header {
   color: var(--color-white);
   background-color: var(--color-gray-dark);
   padding: 4em;
+  container-type: inline-size;
 
   h1 {
     font-family: var(--base-font-family-serif);
-    font-size: 6em;
+    font-size: 20cqw;
     font-weight: 900;
     line-height: 1em;
     margin: 0 0 0.1em 0;
