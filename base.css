@@ -120,6 +120,10 @@ section {
     gap: 0.5em;
   }
 
+  .latest {
+    margin-top: 1.5em;
+  }
+
   .card {
     grid-template-columns: 2em 1fr 1fr;
     gap: 1em;
@@ -131,7 +135,7 @@ section {
     --card-color-light: color-mix(in srgb, var(--card-color), white 70%);
     --card-color-lighter: color-mix(in srgb, var(--card-color), white 98%);
     --card-color-hover: var(--color-blue);
-    --card-transition: ease-out 0.2s;
+    --card-transition: ease-out 0.1s;
 
     cursor: pointer;
     display: grid;
@@ -178,6 +182,12 @@ section {
       justify-self: flex-end;
       font-size: 0.8em;
       color: var(--color-gray-medium);
+    }
+
+    p {
+      font-family: var(--base-font-family-serif);
+      line-height: 1.5em;
+      font-size: 0.9em;
     }
   }
 }
