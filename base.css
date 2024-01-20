@@ -59,6 +59,7 @@ header {
   background-color: var(--color-gray-dark);
   padding: 4em;
   container-type: inline-size;
+  position: relative;
 
   h1 {
     font-family: var(--base-font-family-serif);
@@ -67,6 +68,34 @@ header {
     line-height: 1em;
     margin: 0 0 0.1em 0;
     max-width: 50vw;
+  }
+
+  .cats {
+    position: absolute;
+    bottom: 1.5em;
+    right: 5em;
+    display: flex;
+    gap: 2em;
+
+    img {
+      filter:
+        drop-shadow(1px 1px 0px white)
+        drop-shadow(-1px 1px 0px white)
+        drop-shadow(-1px -1px 0px white)
+        drop-shadow(1px -1px 0px white)
+        drop-shadow(2px 2px 0px white)
+        drop-shadow(-2px 2px 0px white)
+        drop-shadow(-2px -2px 0px white)
+        drop-shadow(2px -2px 0px white);
+    }
+  }
+
+  #jinx {
+    max-height: 10em;
+  }
+
+  #boo {
+    max-height: 11em;
   }
 }
 
