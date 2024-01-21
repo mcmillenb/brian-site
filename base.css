@@ -21,6 +21,9 @@ TODO:
 
   --color-github: #125686;
   --color-stack-overflow: #fe7a16;
+
+  --screen-lg: 1600px;
+  --screen-sm: 770px;
 }
 
 html,
@@ -45,15 +48,6 @@ main {
   grid-template-columns: 50% 50%;
 }
 
-@media only screen and (width < 770px) {
-  main {
-    grid-template:
-      'header'
-      'section'
-      'footer' 2em;
-  }
-}
-
 header {
   grid-area: header;
   color: var(--color-white);
@@ -66,6 +60,12 @@ header {
   container-type: inline-size;
   position: relative;
 
+  > h1, > div {
+    text-shadow:
+      0.5rem 0.5rem 0.5rem var(--color-gray-darker),
+      0.4rem 0.7rem 0.5rem var(--color-gray-darker);
+  }
+
   h1 {
     font-family: var(--base-font-family-serif);
     font-size: 18cqw;
@@ -73,9 +73,6 @@ header {
     line-height: 1em;
     margin: 0 0 0.1em 0;
     max-width: 50vw;
-    text-shadow:
-      0.05em 0.05em 0.05em var(--color-gray-darker),
-      0.04em 0.07em 0.05em var(--color-gray-darker);
   }
 
   .cats {
@@ -213,5 +210,23 @@ footer {
   #dino {
     font-size: 2em;
     margin-right: 0.5em;
+  }
+}
+
+@media only screen and (width < 770px) {
+  main {
+    grid-template:
+      'header'
+      'section'
+      'footer' 2em;
+  }
+}
+
+@media only screen and (width > 1600px) {
+  header, footer {
+    padding-left: calc((100vw - var(--screen-lg)) / 2 + 4em);
+  }
+  section, footer {
+    padding-right: calc((100vw - var(--screen-lg)) / 2 + 4em);
   }
 }
