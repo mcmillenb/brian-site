@@ -33,6 +33,7 @@ body {
   color: var(--color-gray-dark);
   font-family: var(--base-font-family-sans);
   font-size: var(--base-font-size);
+  background-color: var(--color-gray-light);
 }
 
 main {
@@ -106,7 +107,6 @@ header {
 
 section {
   grid-area: section;
-  background-color: var(--color-gray-light);
   padding: 2em 2em 2em 4em;
   display: flex;
   flex-direction: column;
@@ -206,8 +206,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1em;
+  padding: 0 1em;
   font-size: 0.7em;
+  background-color: var(--color-white);
 
   #dino {
     font-size: 2em;
