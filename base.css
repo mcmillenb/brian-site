@@ -107,7 +107,7 @@ section {
   padding: 2em 2em 2em 4em;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 2.5em;
   justify-content: space-between;
   container-type: inline-size;
 
@@ -220,12 +220,21 @@ footer {
       'section'
       'footer' 2em;
   }
+
+  header .cats {
+    gap: 2vw;
+  }
+
+  #jinx, #boo {
+    height: 20cqw;
+  }
 }
 
 @media only screen and (width > 1600px) {
   header, footer {
     padding-left: calc((100vw - var(--screen-lg)) / 2 + 4em);
   }
+
   section, footer {
     padding-right: calc((100vw - var(--screen-lg)) / 2 + 4em);
   }
