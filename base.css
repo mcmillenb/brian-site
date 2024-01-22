@@ -68,7 +68,7 @@ header {
 
   .cats {
     position: absolute;
-    bottom: 30vh;
+    bottom: 24vh;
     right: 5em;
     display: flex;
     gap: 2em;
@@ -114,7 +114,7 @@ section {
   }
 
   .latest {
-    margin-top: 30vh;
+    margin-top: 20vh;
   }
 
   .card {
