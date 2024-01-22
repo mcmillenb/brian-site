@@ -221,8 +221,16 @@ footer {
       'footer' 2em;
   }
 
-  header .cats {
-    gap: 2vw;
+  header {
+    padding: 4em 3em;
+
+    .cats {
+      gap: 2vw;
+    }
+  }
+
+  section {
+    padding: 2em;
   }
 
   #jinx, #boo {
